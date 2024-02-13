@@ -26,7 +26,7 @@ pipeline {
 
 post{
       always{
-            sh 'docker rm -f mypycont'
+            #sh 'docker rm -f mypycont'
             sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
             catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
             mail  to: "ganeshrajgr21@gmail.com",

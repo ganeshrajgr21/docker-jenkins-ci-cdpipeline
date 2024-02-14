@@ -13,7 +13,7 @@ RUN pip install markupsafe==2.0.1
 
 
 
-# Copy the application code into the container at /app
+# Copy the application code into the container to app
 COPY app .
 COPY tests/ app/tests/
 
